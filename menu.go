@@ -21,7 +21,7 @@ type Libro struct {
 }
 
 // crear metodos
-func guardarLibro(libros []Libro) error {
+func agregarLibro(libros []Libro) error {
 	file, err := os.Create("libros.json")
 	if err != nil {
 		return err
@@ -68,10 +68,10 @@ func main() {
 	if err != nil {
 		fmt.Println("Error al cargar el libro")
 	}
+
 	//crear una instancia
 
 	reader := bufio.NewReader(os.Stdin)
-
 	for {
 		fmt.Print("+++++++ GETOR DE LIBROS +++++++\n",
 			"1. Crear nuevo libro\n",
@@ -97,7 +97,7 @@ func main() {
 			//agregar
 			libros = append(libros, c)
 
-			if err := guardarLibro(libros); err != nil {
+			if err := agregarLibro(libros); err != nil {
 				fmt.Println("Error al guardar el libro", err)
 			}
 		case 2:
