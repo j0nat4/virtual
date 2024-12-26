@@ -1,3 +1,9 @@
+/*
+@Autor: Jhonatan velez
+@Fecha: 08/12/2024
+@Descripcion: Sistema de gestion de libros electronicos
+*/
+
 package main
 
 import (
