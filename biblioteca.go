@@ -87,9 +87,8 @@ func mostrarMenu() {
 	fmt.Println("1. Agregar usuario")
 	fmt.Println("2. Agregar libro")
 	fmt.Println("3. Registrar préstamo")
-	fmt.Println("4. buscar libro")
-	fmt.Println("5. Ver préstamos")
-	fmt.Println("6. Salir")
+	fmt.Println("4. Ver préstamos")
+	fmt.Println("5. Salir")
 }
 
 func main() {
@@ -149,7 +148,7 @@ func main() {
 					p.FechaPrestamo.Format("2006-01-02"), p.FechaDevolucion.Format("2006-01-02"))
 			}
 
-		case 6:
+		case 5:
 			fmt.Println("Saliendo...")
 			return
 		default:
